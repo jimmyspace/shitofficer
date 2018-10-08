@@ -1,0 +1,20 @@
+{
+    "apps":
+    {
+        "name": "shitoffcer", // 项目名          
+        "script": "./server.js", // 执行文件
+        "watch": true, // 是否监听文件变动然后重启
+        "env":
+        {
+            "NODE_ENV": "production" // 环境参数，当前指定为生产环境 process.env.NODE_ENV
+        },
+        "env_dev":
+        {
+            "NODE_ENV": "development" // 环境参数，当前指定为开发环境 pm2 start server.js --env_dev
+        },
+        "env_test":
+        { // 环境参数，当前指定为测试环境 pm2 start server.js --env_test
+            "NODE_ENV": "test"
+        }
+    }
+}

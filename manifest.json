@@ -1,0 +1,37 @@
+{
+  "name": "疯壳",
+  "short_name": "Vue HN",
+  "icons": [{
+      "src": "/public/favicon.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }, {
+      "src": "/public/favicon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "/public/favicon.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "/public/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "/public/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/public/favicon.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }, {
+    "src": "/public/favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    }],
+  "start_url": "/",
+  "background_color": "#f2f3f5",
+  "display": "standalone",
+  "theme_color": "#f60"
+}
