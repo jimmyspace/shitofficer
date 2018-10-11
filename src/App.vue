@@ -28,5 +28,12 @@
   width: 100%;
   min-width: 1200px;
   overflow: hidden;
+  .app-router-view{
+    position: relative;
+    padding-bottom: 1em;
+    background: transparent;
+    min-height: calc(100vh - 9em);
+    z-index: 2;
+  }
 }
 </style>

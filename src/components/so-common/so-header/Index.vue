@@ -26,7 +26,7 @@ export default {
   z-index: 999;
   .nav{
     margin: 0 auto;
-    width: 75em;
+    width: 1050px;
     height: 100%;
     .title{
       float: left;

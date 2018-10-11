@@ -135,7 +135,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
     background-color: #eee;
     .background-image {
       position: absolute;

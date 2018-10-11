@@ -15,13 +15,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
 .footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  // margin-top: 1em;
+  height: 4.5em;
   padding: 1.2em 0;
   background: #fff;
+  z-index: 2;
   .footerContent{
     margin: 0 auto;
     width: 75em;

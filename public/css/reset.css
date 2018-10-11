@@ -213,7 +213,9 @@ footer {
 }
 
 html, body {
-  font-family: "微软雅黑", "arial";
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   min-width: 1200px;
   background: #f1f1f1;
 }
