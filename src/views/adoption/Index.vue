@@ -1,5 +1,7 @@
 <template>
   <div class="adoption">
+  	<left_nav></left_nav>
+  	<right_bar></right_bar>
     <div class="container">
       <ul class="pets-list">
         <li class="pet-item" v-for="item in LIST">
@@ -28,6 +30,8 @@
 </template>
 
 <script>
+import left_nav from '~src/components/adoption/left_nav.vue'
+import right_bar from '~src/components/adoption/right_bar.vue'
 export default {
   name: 'Home',
   title () {
@@ -44,6 +48,10 @@ export default {
       
     }
   },
+  components: {
+  	left_nav,
+  	right_bar
+  },
   computed: {
     LIST: {
       get(){
@@ -53,8 +61,6 @@ export default {
         this.$store.commit('ADOPTION/change_list', val)
       }
     }
-  },
-  components: {
   },
   methods: {
   },
@@ -73,7 +79,7 @@ export default {
   overflow: hidden;
   .container{
 	  position: relative;
-	  margin: 0 auto;
+	  margin: 0 0 0 180px;
 	  width: 600px;
 	  overflow: hidden;
 	  .pet-item{
