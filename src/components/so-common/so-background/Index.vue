@@ -1,6 +1,7 @@
 <template>
   <div class="background">
     <div class="background-image"></div>
+    <div class="background-color" v-show = "background_color" :style="'background-color:' + background_color"></div>
     <div id="particles-background" class="background-canvas"></div>
   </div>
 </template>
@@ -10,6 +11,24 @@
     name: 'background',
     mounted() {
       this.buildBackground()
+    },
+    computed: {
+      background_color: {
+        get(){
+          return this.$store.state.background_color
+        },
+        set(val){
+          this.$store.commit('change_background_color', val)
+        }
+      }
+    },
+    watch: {
+      background_color:{
+        handler(val){
+
+        },
+        immediate: true
+      }
     },
     methods: {
       buildBackground() {
@@ -141,12 +160,20 @@
       width: 100%;
       height: 100%;
       opacity: .3;
-      background: url(/public/images/so-common/background.png);
+      background-image: url(/public/images/so-common/background.png);
+    }
+    .background-color{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      opacity: 0.9;
     }
     .background-canvas {
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index: 3;
     }
   }
 </style>

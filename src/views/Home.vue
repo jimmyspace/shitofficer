@@ -1,5 +1,8 @@
 <template>
-  <div class="home">  
+  <div class="home"> 
+    <div class="theme">
+      <img :src="theme" alt="">
+    </div>
   </div>
 </template>
 
@@ -17,10 +20,19 @@ export default {
   },
   data(){
     return {
-      
+      theme_imgs: [
+        '/public/images/home/theme1.jpeg',
+        '/public/images/home/theme2.jpeg',
+      ]
     }
   },
   components: {
+  },
+  computed: {
+    theme(){
+      let INDEX = Math.ceil(Math.random()*this.theme_imgs.length) - 1
+      return this.theme_imgs[INDEX]
+    }
   },
   methods: {
   },
@@ -32,5 +44,14 @@ export default {
 </script>
 
 <style lang="stylus">
-
+.home{
+  position: relative;
+  .theme{
+    margin: 50px auto 0;
+    width: 700px;
+    img{
+      width: 100%;
+    }
+  }
+}
 </style>

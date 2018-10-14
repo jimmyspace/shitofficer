@@ -14,10 +14,12 @@ export function createStore () {
   	  ADOPTION: ADOPTION
   	},
     state: {
-
+      background_color: '',//背景主题色
     },
     mutations: {
-      
+      change_background_color(state, proload){
+        state.background_color = proload
+      }
     },
     actions: {
       

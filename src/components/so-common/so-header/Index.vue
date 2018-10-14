@@ -2,8 +2,14 @@
   <header class="header">
     <nav class="nav">
       <div class="title"><router-link to="/">铲屎官</router-link></div>
-      <div class="userArea">
-      </div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <router-link to="/date">约会</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/adoption">收养</router-link>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -39,23 +45,25 @@ export default {
         color: #666;
       }
     }
-    .userArea{
-      float: right;
-      height: 100%;
-      line-height: 4.5em;
-      font-size: 16px;
-      font-weight: 700;
-      a{
-        text-decoration: none;
-        color: #666;
-        &:hover{
-          text-decoration: underline;
+    .nav-list{
+      float: left;
+      overflow: hidden;
+      .nav-item{
+        float: left;
+        &:first-child{
+          margin-left: 25px;
         }
-      }
-      span{
-        padding: 0 0.2em;
-        text-decoration: none;
-        color: #666;
+        a{
+          display: block;
+          width: 72px;
+          line-height: 74px;
+          color: #555;
+          text-align: center;
+          &.router-link-exact-active{
+            color: #1296db;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
