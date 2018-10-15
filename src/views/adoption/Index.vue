@@ -60,6 +60,14 @@ export default {
       set(val){
         this.$store.commit('ADOPTION/change_list', val)
       }
+    },
+    background_color: {
+      get(){
+        return this.$store.state.background_color
+      },
+      set(val){
+        this.$store.commit('change_background_color', val)
+      }
     }
   },
   methods: {
@@ -67,6 +75,7 @@ export default {
   beforeCreate(){
   },
   beforeMount(){
+  	this.background_color = 'rgb(144, 238, 144, 0.3)'
   }
 }
 </script>

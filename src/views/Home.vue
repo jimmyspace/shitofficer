@@ -32,6 +32,14 @@ export default {
     theme(){
       let INDEX = Math.ceil(Math.random()*this.theme_imgs.length) - 1
       return this.theme_imgs[INDEX]
+    },
+    background_color: {
+      get(){
+        return this.$store.state.background_color
+      },
+      set(val){
+        this.$store.commit('change_background_color', val)
+      }
     }
   },
   methods: {
@@ -39,6 +47,7 @@ export default {
   beforeCreate(){
   },
   beforeMount(){
+    this.background_color = ''
   }
 }
 </script>
@@ -47,7 +56,7 @@ export default {
 .home{
   position: relative;
   .theme{
-    margin: 50px auto 0;
+    margin: 20px auto 0;
     width: 700px;
     img{
       width: 100%;

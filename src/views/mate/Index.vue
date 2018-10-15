@@ -81,9 +81,6 @@ export default {
   },
   beforeMount(){
   	this.background_color = '#FFC0CB'
-  },
-  beforeDestroy(){
-  	this.background_color = ''
   }
 }
 </script>
